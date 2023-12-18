@@ -1,12 +1,12 @@
 import vedo
-import os
 
-def display(path):
-    mesh = vedo.Volume(path)
-    vedo.show(mesh)
+def display_side_by_side(path1, path2):
+    mesh1 = vedo.Volume(path1)
+    mesh2 = vedo.Volume(path2)
 
-# images_list = os.listdir("Dataset/Images")
-labels_list = os.listdir("Dataset/Labels")
+    vedo.show(mesh1, mesh2, shape=(1, 2))
 
 if __name__ == "__main__":
-    display("Dataset/Labels/" + labels_list[0])
+    file1 = "./Dataset/Modified/1.3.6.1.4.1.14519.5.2.1.6279.6001.302134342469412607966016057827.nii.gz"
+    file2 = "segmented-lungs1.nii.gz"
+    display_side_by_side(file1, file2)
