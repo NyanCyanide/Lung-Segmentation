@@ -1,4 +1,4 @@
-#   3D CT Lung Segmentation
+#   3D CT Lung Segmentation using 2D U-Net
 
 This code is for 3D lung segmentation in CT scans using a U-Net model. The dataset consists of 45 patient lung CT scans and their respective masks. The masks contain three labels: trachea, left lung, and right lung. The initial tasks involve removing the trachea (label 5) and merging labels 3 and 4 into one, resulting in a lung mask.
 
@@ -36,3 +36,6 @@ A U-Net model with four layers is created and trained on the prepared dataset. O
 
 The trained model is used to predict a single sliced image. Based on the predictions, a 3D model image is generated. When a 3D image is provided, it will be sliced, segmented in that particular cross-section, and the values will be combined to return the 3D segmented image from the CT scan.
 
+## Comparision
+
+![comparision](./Documentation/comparision.gif)
